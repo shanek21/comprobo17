@@ -195,7 +195,9 @@ class xv11():
             self.sensor_packet, _ = self.sensor_sock.recvfrom(65536)
             neato_outputs = self.sensor_packet.split(chr(26))
             self.response_dict = {resp[:resp.find('\r')]: resp for resp in neato_outputs}
+            print "got a packet"
         except socket.timeout:
+            print "time out"
             self.response_dict = {}
 
     @staticmethod

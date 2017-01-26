@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+""" Exploring the basics of creating messages inside of a ROS node """
+
+from geometry_msgs.msg import PointStamped
+import rospy
+
+rospy.init_node('my_first_node')
+
+r = rospy.Rate(2)
+while True:
+	pass
+	r.sleep()
